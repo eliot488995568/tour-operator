@@ -38,7 +38,7 @@ public class accueil extends JFrame {
 		
 		setTitle("Acceuil_Tour_Operator"); //On donne un titre Ã  l'application
 		setSize(700,400); //On donne une taille Ã  notre fenÃªtre
-		setLocationRelativeTo(null); //On centre la fenÃªtre sur l'Ã©cran
+		setLocationRelativeTo(null); //On centre la fenÃªtre sur l'écran
 		setResizable(true); //On permet le redimensionnement
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //On dit Ã  l'application de se fermer lors du clic sur la croix
 		setJMenuBar(buildMenu());
@@ -70,7 +70,7 @@ private JPanel buildContentPane() {
 		Font font = new Font("Arial",Font.BOLD,26);
 		labelAcceuil.setFont(font);
 		
-		JTextArea description = new JTextArea("Cette application vous permettra de voir de nombreux vols , avec un certains nombeux de d'informations .\n  Vous pourrez Ã©galement rÃ©servÃ©e les vols que vous dÃ©sirez avec un grande simplicitÃ© :) !");
+		JTextArea description = new JTextArea("Cette application vous permettra de voir de nombreux vols , avec un certains nombeux de d'informations .\n  Vous pourrez également réservée les vols que vous désirez avec un grande simplicité :) !");
 		description.setEditable(false);
 		description.setOpaque(false);
 		
@@ -96,7 +96,7 @@ private JPanel buildContentPane() {
 		JLabel image3 = new JLabel(img3, JLabel.CENTER);
 		
 		
-		JButton accesVol = new JButton("AccÃ¨der Ã  la liste des vols"); 
+		JButton accesVol = new JButton("Accéder à  la liste des vols"); 
 				
 		panelComposant.add(labelAcceuil);
 		panelComposant.add(description);
