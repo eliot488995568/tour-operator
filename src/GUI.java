@@ -22,6 +22,7 @@ public class GUI {
 	private VolsGUI volsP;
 	private VolsGUI_E volsEffP;
 	private ListeGUI listeP;
+	private AccueilGUI accueilP;
 	private ListeVolsGUI listeVolP;
 	protected JTextArea infos;
 	private JScrollPane js;
@@ -58,7 +59,18 @@ public class GUI {
 		this.frame.setVisible(true);
 	}
 	
-	//Changer de panel pour supprimer créer des vols.
+	//Changer de panel pour Accueil
+	protected void switchPanelAccueil() {
+		panel.removeAll();
+		accueilP = new AccueilGUI(v, this);
+		panel.add(accueilP);
+		panel.add(js);
+		panel.repaint();
+		this.accueilP.repaint();
+		this.frame.setVisible(true);
+	}
+	
+	//Changer de panel pour créer des vols.
 	protected void switchPanelCreer() {
 		panel.removeAll();
 		volsP = new VolsGUI(v, this);
@@ -95,7 +107,6 @@ public class GUI {
 		gui.frame = new JFrame("Gestion de vols");
 		gui.frame.setSize(LARGEUR, HAUTEUR);
 		gui.frame.setJMenuBar(gui.bar);
-		gui.panel.add(gui.volsP);
 		gui.panel.add(gui.js);
 		gui.frame.getContentPane().add(gui.panel);
 		gui.frame.setVisible(true);

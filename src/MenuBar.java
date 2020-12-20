@@ -13,8 +13,8 @@ import javax.swing.JMenuItem;
 
 public class MenuBar extends JMenuBar {
 
-	private JMenu  vols;
-	private JMenuItem creerVol, supVol, listeVol, listeVols;
+	private JMenu  vols, accueil;
+	private JMenuItem creerVol, supVol, listeVol, listeVols, Accueil;
 	private Vols v;
 	private GUI gui;
 
@@ -26,7 +26,21 @@ public class MenuBar extends JMenuBar {
 	}
 	
 	//Initialise les menus.
+	
 	private void creerMenu() {
+		
+		accueil = new JMenu("Accueil");
+		
+		Accueil = new JMenuItem("Accueil");
+		Accueil.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				gui.switchPanelAccueil();
+			}
+		});
+		
+		add(accueil);
+		
+		accueil.add(Accueil);
 		
 		vols = new JMenu("Vols");
 		
@@ -55,7 +69,7 @@ public class MenuBar extends JMenuBar {
 				gui.switchPanelListeVols();
 			}
 		});
-				
+		
 		vols.add(creerVol);
 		vols.add(supVol);
 		vols.add(listeVol);
